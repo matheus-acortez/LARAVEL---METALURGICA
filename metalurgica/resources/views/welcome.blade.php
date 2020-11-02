@@ -8,11 +8,14 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
 
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background: url("{{ asset('imagens/metalurgica-background.jpg') }}") no-repeat;
+                background-size: cover;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -42,17 +45,12 @@
                 font-size: 84px;
             }
             .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
+                
             }
             .m-b-md {
                 margin-bottom: 30px;
             }
+
         </style>
     </head>
     <body>
@@ -60,32 +58,32 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" class="btn btn-success">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}" class="btn btn-success">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}" class="btn btn-success">Register</a>
                         @endif
                     @endauth
                 </div>
             @endif
 
-            <div class="content">
+            <div class="content principal">
                 <div class="title m-b-md">
-                    Metalurgica
+                    Metalúrgica
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://laravel.com/docs" class="btn btn-primary">Recursos Humanos</a>
+                    <a href="https://laracasts.com" class="btn btn-primary">Manutenção</a>
+                    <a href="https://laravel-news.com" class="btn btn-primary">Suprimentos</a>
+                    <a href="https://blog.laravel.com" class="btn btn-primary">Vendas</a>
+                    <a href="https://nova.laravel.com" class="btn btn-primary">Chão de Fábrica</a>
                 </div>
             </div>
         </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     </body>
 </html>
