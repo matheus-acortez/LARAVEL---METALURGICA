@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Comercial Laravel</title>
+        <title>Metalurgica - Laravel</title>
 
         <!-- Favicon -->
         <link href="{{URL::asset('img/favicon.ico')}}" rel="shortcut icon">
@@ -109,7 +109,7 @@
                                 <label for="name">Nome</label>
                                 <input type="text" name="name" 
                                        class="form-control" 
-                                       value="{{$product->name or old('name')}}"
+                                       value="{{$product->name}}"
                                        required>
                             </div>
                         </div>
@@ -123,7 +123,7 @@
                                        data-placement="top"
                                        title="Usar arquivo com dimensões 300x300 
                                        - JPG, GIF, PNG"
-                                       value="{{$product->imagem or old('imagem')}}">
+                                       value="{{$product->imagem}}">
                             </div>   
                         </div>
                         <div class="col-md-6">
@@ -131,7 +131,7 @@
                                 <label for="description">Descrição</label>
                                 <input type="text" name="description" 
                                        class="form-control" 
-                                       value="{{$product->description or old('description')}}"
+                                       value="{{$product->description}}"
                                        required>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
                                 <label for="quantity">Quantidade</label>
                                 <input type="number" name="quantity" 
                                        class="form-control" 
-                                       value="{{$product->quantity or old('quantity')}}"
+                                       value="{{$product->quantity}}"
                                        required>
                             </div>    
                         </div>                 
@@ -149,7 +149,7 @@
                                 <label for="price">Preço</label>
                                 <input type="text" name="price"                               
                                        class="form-control"
-                                       value="{{$product->price or old('price')}}"
+                                       value="{{$product->price}}"
                                        required>
                             </div>
                         </div>                       
