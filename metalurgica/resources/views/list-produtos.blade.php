@@ -132,12 +132,12 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th id="center">Código</th>
+                                        <th id="center">ID</th>
                                         <th>Nome</th>
                                         <th>Descrição</th>
                                         <th id="center">Quantidade</th>
                                         <th>Preço</th>                
-                                        <th id="center">Imagem</th>                
+                                        <th id="center">Código</th>                
                                         <th id="center">Ações</th>                
                                     </tr>
                                 </thead>
@@ -149,11 +149,7 @@
                                         <td title="Descrição">{{$produto->description}}</td>
                                         <td title="Quantidade" id="center">{{$produto->quantity}}</td>
                                         <td title="Preço">R$ {{number_format($produto->price, 2,',','.')}}</td> 
-                                        <td id="center">
-                                            <a href="{{URL::asset('produtos/'. '1' . $produto->imagem)}}" 
-                                               data-lightbox="{{URL::asset('produtos/'. '1' . $produto->imagem)}}">
-                                                <img src="{{URL::asset('produtos/'. $produto->imagem)}}" />
-                                            </a></td>
+                                        <td id="center" title="Preço">{{$produto->codigo}}</td>
                                         <td id="center">
                                             <a href="{{route('product.edit', $produto->id)}}" 
                                                data-toggle="tooltip" 

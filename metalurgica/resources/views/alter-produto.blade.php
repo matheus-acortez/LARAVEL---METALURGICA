@@ -115,7 +115,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="foto">Foto</label>
+                                <label for="foto">Codigo</label>
                                 <input type="text" 
                                        accept=".gif,.jpg,.png"
                                        class="form-control"
@@ -123,7 +123,7 @@
                                        data-placement="top"
                                        title="Usar arquivo com dimensões 300x300 
                                        - JPG, GIF, PNG"
-                                       value="{{$product->imagem}}">
+                                       value="{{$product->codigo}}">
                             </div>   
                         </div>
                         <div class="col-md-6">

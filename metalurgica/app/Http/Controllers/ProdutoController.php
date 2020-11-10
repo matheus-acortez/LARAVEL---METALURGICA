@@ -23,7 +23,7 @@ class ProdutoController extends Controller
         $product->description = $request->description;
         $product->quantity = $request->quantity;
         $product->price = $request->price;
-        $product->imagem = $request->imagem;
+        $product->codigo = $request->codigo;
         $product->save();
         return redirect()->route('product.index')->with('message', 'Produto criado com sucesso!');
     }

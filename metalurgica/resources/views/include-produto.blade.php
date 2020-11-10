@@ -113,8 +113,8 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="foto"> Foto </label>
-                                <input type="text" name="imagem"
+                                <label for="foto"> Codigo </label>
+                                <input type="text" name="codigo"
                                        accept=".gif,.jpg,.png"
                                        class="form-control"
                                        data-toggle="tooltip" 

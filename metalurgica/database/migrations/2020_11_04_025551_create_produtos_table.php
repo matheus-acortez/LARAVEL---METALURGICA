@@ -19,7 +19,7 @@ class CreateProdutosTable extends Migration
             $table->text('description')->nullable();
             $table->string('quantity');
             $table->decimal('price', 5, 2);
-            $table->string('imagem', 50);
+            $table->string('codigo', 50);
             $table->timestamps();
             $table->softDeletes();
         });
