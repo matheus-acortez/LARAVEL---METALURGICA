@@ -39,7 +39,7 @@
                     <li>
                         <a href="#" style="text-decoration: none">
                             <span class="glyphicon glyphicon-home"></span> 
-                            <span id="underline">Panel</span>
+                            <span id="underline">Home</span>
                         </a>
                     </li>
                     <li class="dropdown">
@@ -52,18 +52,6 @@
                             <li><a href="#">Clientes</a></li>                                               
                             <li><a href="{{route('product.index')}}">Produtos</a></li>                                               
                             
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" 
-                           href="#" style="text-decoration: none">
-                            <span class="glyphicon glyphicon-th"></span> 
-                            <span id="underline">Utilitários</span>
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">                           
-                            <li>
-                                <a href="#">Backup BD</a>
-                            </li>                             
                         </ul>
                     </li>
                 </ul>

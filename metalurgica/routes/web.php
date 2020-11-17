@@ -20,6 +20,9 @@ Route::get('/', function () {
 
 Route::resource('product','ProdutoController');
 
+//Search Route:
+Route::get('/search','SearchProdutosController@index')->name('search');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

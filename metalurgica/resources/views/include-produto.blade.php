@@ -39,7 +39,7 @@
                     <li>
                         <a href="#" style="text-decoration: none">
                             <span class="glyphicon glyphicon-home"></span> 
-                            <span id="underline">Panel</span>
+                            <span id="underline">Home</span>
                         </a>
                     </li>
                     <li class="dropdown">
@@ -51,19 +51,7 @@
                         <ul class="dropdown-menu">                           
                             <li><a href="#">Clientes</a></li>                                               
                             <li><a href="{{route('product.index')}}">Produtos</a></li>                                               
-                            
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" 
-                           href="#" style="text-decoration: none">
-                            <span class="glyphicon glyphicon-th"></span> 
-                            <span id="underline">Utilitários</span>
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">                           
-                            <li>
-                                <a href="#">Backup BD</a>
-                            </li>                             
+                        
                         </ul>
                     </li>
                 </ul>
@@ -89,7 +77,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ol class="breadcrumb">
-                            <li><a href="">Panel</a></li>                  
+                            <li><a href="">Home</a></li>                  
                             <li><a href="{{route('product.index')}}">Produtos</a></li>                  
                             <li class="active">Cadastro</li>
                         </ol>              
@@ -108,7 +96,7 @@
                                 <label for="name">Nome</label>
                                 <input type="text" name="name" 
                                        class="form-control" 
-                                       required>
+                                >
                             </div>
                         </div>
                         <div class="col-md-6">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Produto;
+use App\Http\Requests\ProdutoRequest;
 
 class ProdutoController extends Controller
 {
@@ -17,7 +18,7 @@ class ProdutoController extends Controller
         return view('include-produto');
     }
 
-    public function store(Request $request) {
+    public function store(ProdutoRequest $request) {
         $product = new Produto;
         $product->name = $request->name;
         $product->description = $request->description;
@@ -37,7 +38,7 @@ class ProdutoController extends Controller
         return view('alter-produto', compact('product'));
     }
 
-    public function update(Request $request, $id) {
+    public function update(ProdutoRequest $request, $id) {
         $product = Produto::findOrFail($id); 
         $product->name = $request->name;
         $product->description = $request->description;

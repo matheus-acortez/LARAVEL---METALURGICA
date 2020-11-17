@@ -42,7 +42,7 @@
                     <li>
                         <a href="#" style="text-decoration: none">
                             <span class="glyphicon glyphicon-home"></span> 
-                            <span id="underline"></span>
+                            <span id="underline">Home</span>
                         </a>
                     </li>
                     <li class="dropdown">
@@ -87,7 +87,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ol class="breadcrumb">
-                            <li><a href="#">Panel</a></li>                  
+                            <li><a href="#">Home</a></li>                  
                             <li class="active">Produtos</li>
                         </ol>
                         <br>
@@ -98,8 +98,9 @@
                            class="btn btn-default btn-sm pull-right">
                             <i class="fa fa-book"></i></a>
                         <div id="pesquisa" class="pull-right">
-                            <form class="form-group" method="GET" action="{{ route('search') }}">                                   
-                                <input type="text" name="query" id="query" 
+                            <form class="form-group" type="get" method="post" 
+                                  action="{{ url('/search') }}">                                   
+                                <input type="text" name="pesquisar" 
                                        class="form-control input-sm pull-left" 
                                        placeholder="Pesquisar por nome..." required> 
                                 <button class="btn btn-default btn-sm pull-right" 
@@ -113,7 +114,7 @@
                 <div class="row">
                     <div class="col-md-12">   
                         <br />
-                        <h4 id="center"><b>PRODUTOS CADASTRADOS ({{$total}})</b></h4>
+                        <h4 id="center"><b>PRODUTOS CADASTRADOS</b></h4>
                         <br>
                         <div class="table-responsive">
                             <table class="table table-hover">
@@ -129,7 +130,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($produtos as $produto)
+                                    @foreach($products as $produto)
                                     <tr>
                                         <td id="center">{{$produto->id}}</td>
                                         <td title="Nome">{{$produto->name}}</td>
