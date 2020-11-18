@@ -21,10 +21,30 @@ class ProdutoRequest extends FormRequest
      *
      * @return array
      */
+ 
     public function rules()
     {
+
         return [
-            'name'=> 'required | max:20'  
+            'name' => 'required | max:50',
+            'description' => 'required | max:100',
+            'quantity' => 'required',
+            'price' => 'required',
+            'codigo' => 'required',
+        ];
+
+       
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Nome é obrigatório e de tamanho máximo 50 caracteres',
+            'description.required' => 'Descrição do produto é obrigatório',
+            'quantity.required' => 'Quantidade do produto é obrigatório',
+            'price.required' => 'Preço do produto é obrigatório',
+            'codigo.required' => 'Código do produto é obrigatório',
+
         ];
     }
 }

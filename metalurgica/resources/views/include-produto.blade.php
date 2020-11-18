@@ -86,17 +86,23 @@
                 <div class="row">  
                     <br>
                     <h4 id="center"><b>CADASTRO DOS DADOS DO PRODUTO</b></h4>
+                    
+                
+
                     <br> 
                     <form method="post" 
                           action="{{route('product.store')}}" 
                           enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        <div class="col-md-6">              
+                        <div class="col-md-6" style="display: block;">              
                             <div class="form-group">
                                 <label for="name">Nome</label>
                                 <input type="text" name="name" 
                                        class="form-control" 
                                 >
+                                @if($errors->has('name'))
+                                <p class="text-danger" style="position: absolute;">{{$errors->first('name')}}</p>
+                                @endif
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -109,29 +115,41 @@
                                        data-placement="top"
                                        title="Usar arquivo com dimensões 300x300 
                                        - JPG, GIF, PNG">
+                                @if($errors->has('codigo'))
+                                <p class="text-danger" style="position: absolute;">{{$errors->first('codigo')}}</p>
+                                @endif
                             </div>   
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6" style="margin-top: 10px;">
                             <div class="form-group">
                                 <label for="description">Descrição</label>
                                 <input type="text" name="description" 
                                        class="form-control" 
-                                       required>
+                                       >
+                                @if($errors->has('description'))
+                                <p class="text-danger" style="position: absolute;">{{$errors->first('description')}}</p>
+                                @endif
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6" style="margin-top: 10px;">
                             <div class="form-group">
                                 <label for="quantity">Quantidade</label>
                                 <input type="number" name="quantity" 
                                        class="form-control" 
-                                       required>
+                                       >
+                                @if($errors->has('quantity'))
+                                <p class="text-danger" style="position: absolute;">{{$errors->first('quantity')}}</p>
+                                @endif
                             </div>    
                         </div>                 
-                        <div class="col-md-6">
+                        <div class="col-md-6" style="margin-top: 10px; margin-bottom: 10px;">
                             <div class="form-group">
                                 <label for="price"> Preço </label>
                                 <input type="text" name="price"                               
                                        class="form-control">
+                                @if($errors->has('price'))
+                                <p class="text-danger" style="position: absolute;">{{$errors->first('price')}}</p>
+                                @endif
                             </div>
                         </div>                       
                         <div class="col-md-12">                   
