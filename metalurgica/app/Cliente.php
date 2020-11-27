@@ -9,7 +9,7 @@ class Cliente extends Model
 {	
     //use HasFactory;
 
-    protected $fillable = ['codigo','nome','email', 'senha', 'endereco','numero', 'cidade', 'estado', 'cpf', 'telefone'];
+    protected $fillable = ['nome','email', 'senha', 'endereco','numero', 'cidade', 'estado', 'cpf', 'telefone'];
     protected $guarded = ['id', 'created_at', 'update_at'];
 	protected $table = 'clientes';
 

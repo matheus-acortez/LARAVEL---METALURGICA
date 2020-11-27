@@ -126,9 +126,8 @@
                                         <th>Numero</th> 
                                         <th>Cidade</th> 
                                         <th>Estado</th> 
-                                        <th>CPF</th> 
-                                        <th>Telefone</th> 
-                                        <th id="center">Código</th>                
+                                        <th id="center">CPF</th> 
+                                        <th>Telefone</th>               
                                         <th id="center">Ações</th>                
                                     </tr>
                                 </thead>
@@ -138,12 +137,12 @@
                                         <td id="center">{{$cliente->id}}</td>
                                         <td title="Nome">{{$cliente->nome}}</td>
                                         <td title="Email">{{$cliente->email}}</td>
+                                        <td title="Endereço">{{$cliente->endereco}}</td>
                                         <td title="Numero" id="center">{{$cliente->numero}}</td>
                                         <td title="Cidade">{{$cliente->cidade}}</td>
-                                        <td title="Estado">{{$cliente->estado}}</td>
+                                        <td id="center" title="Estado">{{$cliente->estado}}</td>
                                         <td id="center" title="Cpf">{{$cliente->cpf}}</td>
                                         <td title="Telefone">{{$cliente->telefone}}</td>
-                                        <td id="center" title="Codigo">{{$cliente->codigo}}</td>
                                         <td id="center">
                                             <a href="{{route('cliente.edit', $cliente->id)}}" 
                                                data-toggle="tooltip" 

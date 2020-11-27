@@ -183,17 +183,7 @@
                                 <p class="text-danger" style="position: absolute;">{{$errors->first('telefone')}}</p>
                                 @endif
                             </div>
-                        </div>  
-                        <div class="col-md-6" style="margin-top: 10px; margin-bottom: 10px;">
-                            <div class="form-group">
-                                <label for="codigo"> Código </label>
-                                <input type="text" name="codigo"                               
-                                       class="form-control">
-                                @if($errors->has('codigo'))
-                                <p class="text-danger" style="position: absolute;">{{$errors->first('codigo')}}</p>
-                                @endif
-                            </div>
-                        </div>                                                          
+                        </div>                                               
                         <div class="col-md-12">                   
                             <button type="reset" class="btn btn-default">
                                 Limpar

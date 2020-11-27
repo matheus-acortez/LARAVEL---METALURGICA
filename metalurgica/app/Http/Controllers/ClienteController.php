@@ -19,7 +19,6 @@ class ClienteController extends Controller
 
     public function store(Request $request) {
         $cliente = new Cliente;
-        $cliente->codigo = $request->codigo;
         $cliente->nome = $request->nome;
         $cliente->email = $request->email;
         $cliente->senha = $request->senha;
@@ -44,7 +43,6 @@ class ClienteController extends Controller
 
     public function update(Request $request, $id) {
         $cliente = Cliente::findOrFail($id); 
-        $cliente->codigo = $request->codigo;
         $cliente->nome = $request->nome;
         $cliente->email = $request->email;
         $cliente->senha = $request->senha;
@@ -59,7 +57,7 @@ class ClienteController extends Controller
     }
 
     public function destroy($id) {
-        $cliente = Produto::findOrFail($id);
+        $cliente = Cliente::findOrFail($id);
         $cliente->delete();
         return redirect()->route('cliente.index')->with('message', 'Cliente excluído com sucesso!');
     }
