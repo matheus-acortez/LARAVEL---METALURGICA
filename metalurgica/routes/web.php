@@ -20,6 +20,9 @@ Route::get('/', function () {
 
 Route::resource('product','ProdutoController');
 
+Route::resource('cliente','ClienteController');
+
+
 //Search Route:
 Route::get('/search','SearchProdutosController@index')->name('search');
 
