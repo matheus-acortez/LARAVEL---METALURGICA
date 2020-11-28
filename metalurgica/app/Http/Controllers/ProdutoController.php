@@ -14,6 +14,12 @@ class ProdutoController extends Controller
         return view('list-produtos', compact('produtos', 'total'));
     }
 
+    public function produtos_cadastrados() {
+        $produtos = Produto::all();
+        $total = Produto::all()->count();
+        return view('home', compact('produtos', 'total'));
+    }
+
     public function create() {
         return view('include-produto');
     }
