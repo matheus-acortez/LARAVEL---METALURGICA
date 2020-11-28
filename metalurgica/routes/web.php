@@ -25,6 +25,9 @@ Route::resource('cliente','ClienteController');
 
 //Search Route:
 Route::get('/search','SearchProdutosController@index')->name('search');
+Route::get('/search-cliente','SearchClientesController@index')->name('search');
+
+
 
 Auth::routes();
 
