@@ -52,7 +52,7 @@ class ClienteController extends Controller
         $cliente->estado = $request->estado;
         $cliente->cpf = $request->cpf;
         $cliente->telefone = $request->telefone;
-        $product->save();
+        $cliente->save();
         return redirect()->route('cliente.index')->with('message', 'Cliente alterado com sucesso!');
     }
 

@@ -18,6 +18,7 @@ class ProdutoController extends Controller
         return view('include-produto');
     }
 
+
     public function store(ProdutoRequest $request) {
         $product = new Produto;
         $product->name = $request->name;
