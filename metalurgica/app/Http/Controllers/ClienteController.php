@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cliente;
+use App\Http\Requests\ClienteRequest;
 
 
 
@@ -19,7 +20,7 @@ class ClienteController extends Controller
         return view('include-cliente');
     }
 
-    public function store(Request $request) {
+    public function store(ClienteRequest $request) {
         $cliente = new Cliente;
         $cliente->nome = $request->nome;
         $cliente->email = $request->email;
@@ -43,7 +44,7 @@ class ClienteController extends Controller
         return view('alter-cliente', compact('cliente'));
     }
 
-    public function update(Request $request, $id) {
+    public function update(ClienteRequest $request, $id) {
         $cliente = Cliente::findOrFail($id); 
         $cliente->nome = $request->nome;
         $cliente->email = $request->email;
